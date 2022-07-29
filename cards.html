@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Superhero Cards</title>
+        <link rel='stylesheet' href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Staatliches&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+      </script>
+    </head>
+    <body>
+
+        <h1 id="heading"> Superhero Cards </h1>
+        
+        <div class="filters">
+          <button value="card" class="active">Show all</button>
+          <button value="avengers">Avengers</button>
+          <button value="dc">DC</button>
+          <button value="guardians">Guardians Of Galaxy</button>
+          <button value="titans">Teen Titans</button>
+            
+        </div>
+
+        <div class="list">
+            <div class='card dc'>
+              <img src="images/superman.jpg">
+              <p>Superman</p>
+         </div>  
+          <div class='card avengers'>
+              <img src="images/thor.jpg">
+              <p>Thor</p>
+        </div>
+          <div class='card avengers'>
+              <img src="images/ironman.jpg">
+              <p>Ironman</p>
+        </div>
+         <div class='card dc'>
+              <img src="images/aquaman.jpg">
+              <p>Aquaman</p>
+         </div>  
+          <div class='card avengers'>
+              <img src="images/hulk.jpg">
+              <p>Hulk</p>
+        </div>
+          <div class='card avengers'>
+              <img src="images/spiderman.jpg">
+              <p>Spiderman</p>
+        </div>
+          <div class='card dc'>
+              <img src="images/flash.jpg">
+              <p>Flash</p>
+         </div>  
+          <div class='card'>
+              <img src="images/thanos.jpg">
+              <p>Thanos</p>
+        </div>
+          <div class='card guardians'>
+              <img src="images/gamora.jpg">
+              <p>Gamora</p>
+        </div>
+         <div class='card titans'>
+              <img src="images/beastboy.jpg">
+              <p>Beastboy</p>
+         </div>  
+          <div class='card titans'>
+              <img src="images/robin.jpg">
+              <p>Robin</p>
+        </div>
+          <div class='card titans'>
+              <img src="images/starfire.jpg">
+              <p>Starfire</p>
+        </div>
+           <div class='card avengers'>
+              <img src="images/america.jpg">
+              <p>Captian America</p>
+         </div>  
+          <div class='card avengers'>
+              <img src="images/blackwidow.jpg">
+              <p>Black Widow</p>
+        </div>
+          <div class='card guardians'>
+              <img src="images/drax.jpg">
+              <p>Drax</p>
+        </div>
+         <div class='card'>
+              <img src="images/deadpool.jpg">
+              <p>Deadpool</p>
+         </div>  
+          <div class='card guardians'>
+              <img src="images/groot.jpg">
+              <p>Groot</p>
+        </div>
+          <div class='card dc'>
+              <img src="images/wonder.jpg">
+              <p>Wonderwoman</p>
+        </div>
+          <div class='card guardians'>
+              <img src="images/rocket.jpg">
+              <p>Rocket Racoon</p>
+        </div> 
+        <div class='card guardians'>
+              <img src="images/starlord.jpg">
+              <p>Star Lord</p>
+        </div>
+      </div>
+        <script>
+
+         function filterCards(event){
+           var clicked = event.currentTarget;
+           var label = $(clicked).text();
+           $('.card').hide();
+           var selected = $(clicked).val();
+           $('.'+selected).show();
+           if (selected == 'card') {
+             $('#heading').text("Superhero Cards");
+         }  else {
+           $('#heading').text(label);
+         } 
+         $('.active').removeClass('active');
+         $(clicked).addClass('active');
+       }
+          
+         $('button').click(filterCards);
+            
+         
+           
+        </script>
+    </body>
+</html>
+<script type="application/javascript" src="/share.js"></script>
